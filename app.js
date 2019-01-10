@@ -71,7 +71,7 @@ database.ref().on("child_added", function (childSnapshot) {
     $("#train-table > tbody").append(newRow);
 });
 
-var firstTime = "04:00";
+var firstTime = "";
 
 var firstTimeConverted = moment(firstTime, "HH:mm").subtract(1, "years");
 console.log(firstTimeConverted);
@@ -83,3 +83,10 @@ var diffTime = moment().diff(moment(firstTimeConverted), "minutes");
 console.log("Difference in time: " + diffTime);
 
 var timeLeft = diffTime % trainFrequency;
+console.log(timeLeft);
+
+var tMinutesTillTrain = trainFrequency - timeLeft;
+console.log("Minutes till train: " + tMinutesTillTrain);
+
+var nextTrain = moment().add(tMinutesTillTrain, "minutes");
+console.log("Arrival time: " + moment(nextTrain).format("HH:mm"));
