@@ -8,15 +8,27 @@
 
     <title>Train Itinerary</title>
 
+    <link rel="stylesheet" href="style.css">
+    <!-- Bootstrap CSS Link -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+    <!-- JQuery Link -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <!-- Popper -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <!-- Bootstrap JS Link -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <!-- Firebase App -->
+    <!-- <script src="https://www.gstatic.com/firebasejs/5.8.5/firebase.js"></script> -->
+    <script src="https://www.gstatic.com/firebasejs/5.8.5/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.5/firebase-database.js"></script>
+    <!-- Moment JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
 
 </head>
 
 <body>
     <div class="container">
-        <div class="jumbotron">
+        <div class="jumbotron" id='jumbotron'>
             <h1 class="text-center"><strong>Caboose Itinerary</strong></h1>
             <p class="text-center">You should never trust a train because they have loco motives...</p><br>
             <p class="text-center">So we've created a handy itinerary for you!</p>
@@ -44,9 +56,6 @@
                     </div>
                 </div>
             </div>
-
-
-
         </div>
 
         <div class="row">
@@ -73,7 +82,7 @@
                                 <input class="form-control" id="frequency-input" type="text">
                             </div>
 
-                            <button class="btn btn-primary float-right" id="add-train-btn">Submit</button>
+                            <button class="btn float-right" type="submit" id="add-train-btn">Submit</button>
                         </form>
 
                     </div>
@@ -83,7 +92,7 @@
 
     </div>
 
-    <script scr="app.js"></script>
+    <script src="app.js"></script>
 
 </body>
 
